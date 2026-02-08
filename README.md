@@ -25,7 +25,8 @@ Reduces dimensions by projecting the input data on eigenvectors with largest eig
 1. **Compute covariance matrix**
     
     $$
-    S = \frac{1}{n} (X-\overline{X})^\top \cdot (X-\overline{X})
+    S = \frac1n (X-\overline{X})^T *(X-\overline{X})
+    
     $$
     
 2. **Compute eigenvectors of the matrix**: the eigenvectors needs to be sorted according to largest eignevalues, since we want to select eigenvectors with the largest eigenvalues (represents directions with maximum variance)
@@ -33,17 +34,22 @@ Reduces dimensions by projecting the input data on eigenvectors with largest eig
 3. **Compute projection of data onto eigenvectors**
 
 $$
-X_{\text{proj}} = (X-\overline{X}) \cdot \text{eigenvectors}
+X_{proj} = (X-\overline{X}) * (eigenvectors)
 $$
 
 ## Logistic regression
 **Predicted probability**: Sigmoid function.
 
+
+
 $$
 \hat{p} = q_\theta(x_i) = \sigma(\theta^\top x_i)
 $$
 
+
 **Predicted label**: Decision rule.
+
+
 
 $$
 \hat{y} = f(\hat{p}) =
@@ -52,6 +58,7 @@ $$
 0 & \text{otherwise}
 \end{cases}
 $$
+
 
 **Loss function**: binary cross‑entropy loss with L2 regularization
 
@@ -78,36 +85,36 @@ $$
 **Gradient w.r.t. weights**
 
 $$
-\frac{\partial}{\partial w} L(w, b)
-=
-\sum_{i=1}^{n} x_i \left(\sigma(w^\top x_i + b) - y_i\right) + \alpha w
+\frac{\partial}{\partial w} L(w, b)=\sum_{i=1}^{n} x_i \left(\sigma(w^\top x_i + b) - y_i\right) + \alpha w
 $$
 
-$$
-\frac{\partial}{\partial w} L(w, b)
-=
-X^\top \left(\sigma(Xw + b) - Y\right) + \alpha w
-$$
+$$ \frac{\partial}{\partial w} L(w, b) = X^\top \left(\sigma(Xw + b) - Y\right) + \alpha w $$
+
 
 **Gradient w.r.t. bias**
 
 $$
-\frac{\partial}{\partial b} L(w, b)
-=
-\sum_{i=1}^{n} \left(\sigma(w^\top x_i + b) - y_i\right)
+\frac{\partial}{\partial b} L(w, b)=\sum_{i=1}^{n} \left(\sigma(w^\top x_i + b) - y_i\right)
 $$
 
+
 $$
-\frac{\partial}{\partial b} L(w, b)
-=
-\sum_{i=1}^{n} \left(\sigma(Xw + b) - Y\right)
+\frac{\partial}{\partial b} L(w, b)=\sum_{i=1}^{n} \left(\sigma(Xw + b) - Y\right)
 $$
 
-**c. Update rule for parameters**
+ **c. Update rule for parameters**
+
+$$
+\theta_{t+1} := \theta_t + \nabla_\theta
+$$
 
 $$
 \theta_{t+1} = \theta_t - \lambda \frac{\partial}{\partial \theta} L(\theta)
 $$
+
+
+
+
 
 ## Generalization
 ### Grid Search
@@ -131,26 +138,16 @@ $$
 ### Performance metrics
 **Precision**: 
 
-$$
-\text{precision} = \frac{\text{TP}}{\text{TP + FP}}
-$$
+$$\text{precision} = \frac{\text{TP}}{\text{TP + FP}}$$
 
 **Recall**: 
-
-$$
-\text{Recall} = \frac{\text{TP}}{\text{TP + FN}}
-$$
+$$\text{Recall} = \frac{\text{TP}}{\text{TP + FN}}$$
 
 **F1-Score**:
-
-$$
-F_{1} = 2 \cdot  \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}
-$$
+$$F_{1} = 2 \cdot  \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}$$
 
 **Results**
-
 ![alt text](/confusion_matrix.png)
-
 - Training accuracy 0.8921997638396888
 - Validation accuracy  0.8946971501151068
 - Test accuracy 0.7155784244144784
@@ -168,8 +165,8 @@ $$
 **Activation**
 
 $$
-a^{(\ell)} = \sigma\left(z^{(\ell)}\right)
-= \sigma\left(W^{(\ell)} a^{(\ell-1)} + b^{(\ell)}\right)
+a^{(\ell)} = \sigma\!\left(z^{(\ell)}\right)
+= \sigma\!\left(W^{(\ell)} a^{(\ell-1)} + b^{(\ell)}\right)
 $$
 
 **Gradient of the last layer $L$**
@@ -184,7 +181,7 @@ g^{(L)} =
 =
 \frac{\partial J}{\partial \hat{y}} 
 \cdot 
-\sigma'\left(z^{(L)}\right)
+\sigma'\!\left(z^{(L)}\right)
 $$
 
 **Gradient of an arbitrary layer $\ell$**
@@ -196,7 +193,7 @@ g^{(\ell)}
 =
 \left(W^{(\ell+1)}\right)^\top g^{(\ell+1)}
 \odot 
-\sigma'\left(z^{(\ell)}\right)
+\sigma'\!\left(z^{(\ell)}\right)
 $$
 
 **Gradient of the loss w.r.t. weights**
@@ -227,7 +224,7 @@ Compute and store all preactivations  $z^{(\ell)}$ and activations $a^{(\ell)}$
 
 **3. Backward pass (loop from last layer $L$ down to layer 1)**
 
-**a. Compute gradient for the last layer** $g^{(L)}$
+**a. Compute gradient for the last layer** $g^{(L)} $
 
 **b. Compute gradient for any hidden layer**  $g^{(\ell)}$
 
@@ -237,7 +234,6 @@ Compute and store all preactivations  $z^{(\ell)}$ and activations $a^{(\ell)}$
 
 **4. Update parameters**  
 For each layer:
-
 $$
 W^{(\ell)} \leftarrow W^{(\ell)} - \eta \, \nabla_{W^{(\ell)}} J
 $$
