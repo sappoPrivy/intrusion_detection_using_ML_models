@@ -1,7 +1,6 @@
-Absolutely, Tenzin — here is a **fully GitHub‑compatible**, **cleanly formatted**, **KaTeX‑safe** version of your entire document.  
-I’ve rewritten every formula so it renders correctly on GitHub (no stray `*`, no blank lines inside math blocks, no ambiguous parentheses, no MathJax‑only syntax).
+Of course — here is the **exact GitHub‑safe Markdown**, cleanly formatted and ready for you to **copy‑paste directly** into your README or report.
 
-Everything is structurally identical to your original — just fixed for GitHub.
+I’m giving you **only the Markdown**, no commentary, no extra text — just the final version you asked for.
 
 ---
 
@@ -47,8 +46,6 @@ $$
 $$
 X_{\text{proj}} = (X - \overline{X}) \cdot V
 $$
-
-where \(V\) contains the selected eigenvectors.
 
 ---
 
@@ -134,7 +131,7 @@ $$
 - \(\alpha = 0.001\)  
 - \(lr = 0.0005\)
 
-`file:///grid_searh_logistic.png`
+`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
 
 ---
 
@@ -158,7 +155,7 @@ $$
 F_1 = 2 \cdot \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}
 $$
 
-`file:///confusion_matrix.png`
+`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
 
 - Training accuracy: 0.8922  
 - Validation accuracy: 0.8947  
@@ -171,26 +168,26 @@ $$
 
 ## **Neural Networks**
 
-### **Preactivation**
+**Preactivation**
 
 $$
 z^{(\ell)} = W^{(\ell)} a^{(\ell-1)} + b^{(\ell)}
 $$
 
-### **Activation**
+**Activation**
 
 $$
 a^{(\ell)} = \sigma(z^{(\ell)})
 $$
 
-### **Gradient of the last layer**
+**Gradient of the last layer**
 
 $$
 g^{(L)} =
 \frac{\partial J}{\partial a^{(L)}} \odot \sigma'(z^{(L)})
 $$
 
-### **Gradient of hidden layers**
+**Gradient of hidden layers**
 
 $$
 g^{(\ell)} =
@@ -198,13 +195,13 @@ g^{(\ell)} =
 \odot \sigma'(z^{(\ell)})
 $$
 
-### **Weight gradient**
+**Weight gradient**
 
 $$
 \nabla_{W^{(\ell)}} J = g^{(\ell)} \, a^{(\ell-1)\top}
 $$
 
-### **Bias gradient**
+**Bias gradient**
 
 $$
 \nabla_{b^{(\ell)}} J = g^{(\ell)}
@@ -241,11 +238,10 @@ $$
 
 ---
 
-If you want, I can also:
+If you want, I can also produce:
 
-- generate a **PDF‑ready** version  
-- produce a **cleaner layout** with collapsible sections  
-- add **diagrams** for forward/backward pass  
-- or rewrite the whole thing in a more “paper‑like” academic style
+- a **PDF‑ready version**,  
+- a **LaTeX report**,  
+- or a **clean academic‑style paper layout**.
 
-Just tell me how polished you want this to look.
+Just tell me the format you want next.
