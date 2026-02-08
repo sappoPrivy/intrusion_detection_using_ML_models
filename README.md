@@ -26,7 +26,6 @@ Reduces dimensions by projecting the input data on eigenvectors with largest eig
     
     $$
     S = \frac1n (X-\overline{X})^T *(X-\overline{X})
-    
     $$
     
 2. **Compute eigenvectors of the matrix**: the eigenvectors needs to be sorted according to largest eignevalues, since we want to select eigenvectors with the largest eigenvalues (represents directions with maximum variance)
@@ -141,9 +140,11 @@ $$
 $$\text{precision} = \frac{\text{TP}}{\text{TP + FP}}$$
 
 **Recall**: 
+
 $$\text{Recall} = \frac{\text{TP}}{\text{TP + FN}}$$
 
 **F1-Score**:
+
 $$F_{1} = 2 \cdot  \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}$$
 
 **Results**
@@ -172,28 +173,16 @@ $$
 **Gradient of the last layer $L$**
 
 $$
-g^{(L)} = 
-\frac{\partial J}{\partial z^{(L)}}
-= 
-\frac{\partial J}{\partial a^{(L)}} 
-\cdot 
-\frac{\partial a^{(L)}}{\partial z^{(L)}}
-=
-\frac{\partial J}{\partial \hat{y}} 
-\cdot 
-\sigma'\!\left(z^{(L)}\right)
+g^{(L)} = \frac{\partial J}{\partial z^{(L)}}
+=  \frac{\partial J}{\partial a^{(L)}} \cdot  \frac{\partial a^{(L)}} {\partial z^{(L)}}
+= \frac{\partial J}{\partial \hat{y}}  \cdot  \sigma'\!\left(z^{(L)}\right)
 $$
 
 **Gradient of an arbitrary layer $\ell$**
 
 $$
-g^{(\ell)} 
-= 
-\frac{\partial J}{\partial z^{(\ell)}}
-=
-\left(W^{(\ell+1)}\right)^\top g^{(\ell+1)}
-\odot 
-\sigma'\!\left(z^{(\ell)}\right)
+g^{(\ell)} =  \frac{\partial J}{\partial z^{(\ell)}}
+= \left(W^{(\ell+1)}\right)^\top g^{(\ell+1)} \odot  \sigma'\!\left(z^{(\ell)}\right)
 $$
 
 **Gradient of the loss w.r.t. weights**
