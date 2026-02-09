@@ -199,13 +199,11 @@ $$
 
 **Backpropagation Method**
 
-**1. Initialize layers**  
-Create each layer with:
+**1. Initialize layers**: Create each layer with
 - Weight matrix:  $W^{(\ell)} \in \mathbb{R}^{\,n_\ell \times n_{\ell-1}}$
 - Bias vector:  $b^{(\ell)} \in \mathbb{R}^{\,n_\ell \times 1}$
 
-**2. Forward pass**  
-Compute and store all preactivations  $z^{(\ell)}$ and activations $a^{(\ell)}$
+**2. Forward pass**: Compute and store all preactivations  $z^{(\ell)}$ and activations $a^{(\ell)}$
 
 **3. Backward pass (loop from last layer $L$ down to layer 1)**
 
@@ -217,8 +215,7 @@ Compute and store all preactivations  $z^{(\ell)}$ and activations $a^{(\ell)}$
 - Weight gradient: $\nabla_{W^{(\ell)}} J$
 - Bias gradient: $\nabla_{b^{(\ell)}} J$
 
-**4. Update parameters**  
-For each layer:
+**4. Update parameters** for each layer:
 
 $$
 W^{(\ell)} \leftarrow W^{(\ell)} - \eta \, \nabla_{W^{(\ell)}} J
