@@ -188,17 +188,13 @@ $$
 **Gradient of the loss w.r.t. weights**
 
 $$
-\nabla_{W^{(\ell)}} J
-=
-g^{(\ell)} \, {a^{(\ell-1)}}^\top
+\nabla_{W^{(\ell)}} J =g^{(\ell)} \, {a^{(\ell-1)}}^\top
 $$
 
 **Gradient of the loss w.r.t. biases**
 
 $$
-\nabla_{b^{(\ell)}} J
-=
-g^{(\ell)}
+\nabla_{b^{(\ell)}} J = g^{(\ell)}
 $$
 
 **Backpropagation Method**
@@ -218,11 +214,12 @@ Compute and store all preactivations  $z^{(\ell)}$ and activations $a^{(\ell)}$
 **b. Compute gradient for any hidden layer**  $g^{(\ell)}$
 
 **c. Compute parameter gradients**  
-- Weight gradient: $ \nabla_{W^{(\ell)}} J$
+- Weight gradient: $\nabla_{W^{(\ell)}} J$
 - Bias gradient: $\nabla_{b^{(\ell)}} J$
 
 **4. Update parameters**  
 For each layer:
+
 $$
 W^{(\ell)} \leftarrow W^{(\ell)} - \eta \, \nabla_{W^{(\ell)}} J
 $$
