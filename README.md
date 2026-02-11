@@ -73,7 +73,8 @@ y_i \log \sigma(w^\top x_i + b)
 \frac{\alpha}{2}\|w\|_2^2
 $$
 
-**Stochastic Gradient Descent**: Minimize the loss function by using gradients to update the weights.
+### Stochastic Gradient Descent
+**Stochastic Gradient Descent Algorithm**: Minimize the loss function by using gradients to update the weights.
 
 **1. For each of the \(T\) iterations, perform weight updates**
 
