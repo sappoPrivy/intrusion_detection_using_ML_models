@@ -74,7 +74,7 @@ y_i \log \sigma(w^\top x_i + b)
 $$
 
 ### Stochastic Gradient Descent
-**Stochastic Gradient Descent Algorithm**: Minimize the loss function by using gradients to update the weights.
+**SGD Algorithm**: Minimize the loss function by using gradients to update the weights.
 
 **1. For each of the \(T\) iterations, perform weight updates**
 
