@@ -64,7 +64,7 @@ INTRUSION_DETECTION/
 | Model                           | Train Acc | Val Acc | Test Acc | Notes                     |
 |---------------------------------|-----------|---------|----------|----------------------------|
 | Logistic Regression             | 89.22     | 89.47   | 71.56    | -      |
-| Binary Neural Network           | 0.9156    | 91.39   | 71.15    | -            |
+| Binary Neural Network           | 91.56    | 91.39   | 71.15    | -            |
 | Softmax Regression (Multiclass) | TBD       | TBD     | TBD      | -  |
 | Multiclass Neural Network       | TBD       | TBD     | TBD      | -       |
 
