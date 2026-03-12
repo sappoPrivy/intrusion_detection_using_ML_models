@@ -1,7 +1,6 @@
 # Intrusion Detection with implemented ML Models
 
-This project implements several machine‑learning models **from scratch using NumPy** to classify network traffic in the NSL‑KDD dataset.  
-This includes PCA, logistic regression, softmax regression, binary neural network, multiclass neural network, which are implemented manually without ML libraries.
+This project implements several machine‑learning models **from scratch using NumPy** to classify network traffic in the NSL‑KDD dataset. This includes PCA, logistic regression, softmax regression, binary neural network, multiclass neural network, which are implemented manually without ML libraries.
 
 
 ## 🚀 Project Overview
