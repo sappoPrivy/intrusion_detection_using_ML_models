@@ -3,7 +3,6 @@
 This project implements several machine‑learning models **from scratch using NumPy** to classify network traffic in the NSL‑KDD dataset.  
 This includes PCA, logistic regression, softmax regression, binary neural network, multiclass neural network, which are implemented manually without ML libraries.
 
----
 
 ## 🚀 Project Overview
 
@@ -16,8 +15,6 @@ Models implemented:
 - Multiclass Neural Network (softmax output)
 
 All experiments are done in Jupyter notebooks inside `src/`.
-
----
 
 ## 📦 Prerequisites
 
