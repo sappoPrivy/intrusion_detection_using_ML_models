@@ -183,3 +183,27 @@ b^{(\ell)} \leftarrow b^{(\ell)} - \eta \, \nabla_{b^{(\ell)}} J
 $$
 
 ## Softmax Regression
+**Predicted probability**: The softmax function for a vector of logits $ z=\theta^\top x_i \in \mathbb{R}^K $ is defined as:
+
+
+
+$$
+\text{softmax}(z)_i = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}
+$$
+
+**Decision rule**: The class with highest probability is most likely according to the model.
+$$
+\hat{y}_i = \arg\max_{k} \; p_{i,k}
+$$
+
+**Loss function**: For a dataset of $ N $ samples, with softmax probabilities $ p_{i,k} $ and one‑hot labels $ y_{i,k} $, the multiclass cross‑entropy loss is:
+
+
+
+$$
+\mathcal{L} = - \frac{1}{n} \sum_{i=1}^{n} \log p_{i,\,y_i} \;+\;
+\frac{\lambda}{2} \sum_{j=1}^{D} \sum_{k=1}^{K} W_{j,k}^{2}
+$$
+- D features
+- K classes
+- Frobenius regularization above $\frac{\alpha}{2}\|W\|_F^2$
