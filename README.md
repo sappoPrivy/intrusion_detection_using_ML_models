@@ -64,9 +64,9 @@ INTRUSION_DETECTION/
 | Model                           | Train Acc | Val Acc | Test Acc | Notes                     |
 |---------------------------------|-----------|---------|----------|----------------------------|
 | Logistic Regression             | 89.22     | 89.47   | 71.56    | L2 reg (euclidean) + SGD      |
-| Binary Neural Network           | 91.56    | 91.39   | 71.15    | logistic + sigmoid activation     |
+| Binary Neural Network           | 91.98    | 91.85   | 69.57    | logistic + sigmoid activation     |
 | Softmax Regression              | 83.69       | 86.25     | 62.67      | L2 reg (frobenius) + SGD  |
-| Multiclass Neural Network       | TBD       | TBD     | TBD      | softmax + ReLu activation       |
+| Multiclass Neural Network       | 84.57       | 84.43     |  62.81     | softmax + ReLu activation + He initialization       |
 
 ## Documentation **[🔗](./documents/)**
 
