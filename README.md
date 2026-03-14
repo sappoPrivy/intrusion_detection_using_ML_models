@@ -47,12 +47,14 @@ INTRUSION_DETECTION/
 ├── img/
 │   ├── confusion_matrix.png
 │   ├── grid_search_logistic.png
+│   ├── grid_search_softmax.png
 │   └── image.png
 │
 ├── src/
 │   ├── binary_logistic_regression.ipynb
 │   ├── binary_neural_networks.ipynb
 │   ├── dimensionality_reduction.ipynb
+│   ├── exploratory_data_analysis.ipynb
 │   ├── multiclass_neural_networks.ipynb
 │   └── multiclass_softmax_regression.ipynb
 │
