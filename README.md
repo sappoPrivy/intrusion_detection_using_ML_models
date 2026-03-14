@@ -66,18 +66,20 @@ INTRUSION_DETECTION/
 | Model                           | Train Acc | Val Acc | Test Acc | Notes                     |
 |---------------------------------|-----------|---------|----------|----------------------------|
 | Logistic Regression             | 89.22     | 89.47   | 71.56    | L2 reg (euclidean) + SGD      |
-| Binary Neural Network           | 91.98    | 91.85   | 69.57    | logistic + sigmoid activation     |
+| Binary Neural Network           | 91.98    | 91.85   | 69.57    | logistic reg + sigmoid activation     |
 | Softmax Regression              | 83.69       | 86.25     | 62.67      | L2 reg (frobenius) + SGD  |
-| Multiclass Neural Network       | 84.57       | 84.43     |  62.81     | softmax + ReLu activation + He init       |
+| Multiclass Neural Network       | 84.57       | 84.43     |  62.81     | softmax reg + ReLu activation + He init       |
 
-Note: The models generalizes well on training and validation data, but fail to generalize well on test data which can be due to class imbalance. Ensure stratification is added.
+Note: The models generalizes well on training and validation data, but fail to generalize well on test data which can be due to due to different class proportions. Ensure stratification is added.
 
 | Model                           | Train Acc | Val Acc | Test Acc | Notes                     |
 |---------------------------------|-----------|---------|----------|----------------------------|
 | Logistic Regression             | 81.73     | 87.20   | 81.16    | Stratification      |
-| Binary Neural Network           | TBD    | TBD   | TBD    | Stratification     |
-| Softmax Regression              | TBD       | TBD     | TBD      | Stratification  |
-| Multiclass Neural Network       | TBD       | TBD     |  TBD     | Stratification       |
+| Binary Neural Network           |  85.50   |  85.31  |  85.18   | Stratification     |
+| Softmax Regression              | 76.92       | 82.05     | 77.06      | Stratification  |
+| Multiclass Neural Network       | 82.13       | 82.17     |  82.10     | L2 reg (weight decay) + Stratification       |
+
+Note: Accuracy can be misleading especially for multi-class problems, F1 score may be terrible since models are limited in generalizing well for all 40 classes because of class imbalance!
 
 ## Documentation **[🔗](./documents/)**
 
