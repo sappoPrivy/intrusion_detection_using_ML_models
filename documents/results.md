@@ -21,12 +21,12 @@
 
 ## Binary Neural Networks
 **Hyperparameter selection**
-- learning Rate: 0.0003
+- learning Rate: 0.001
 
 **Performance metrics**
-- Train Accuracy: 0.9156471090207286
-- Validation Accuracy: 0.9139080733507978
-- Test Accuracy: 0.7114975159687722
+- Train Accuracy: 91.97451850087816
+- Validation Accuracy: 91.85123442089387
+- Test Accuracy: 69.56618168914123
 
 ## Multi-class Softmax Regression
 **Hyperparameter selection**
@@ -42,3 +42,10 @@
 - Macro F1: 0.07519912622310268
 
 ## Multi-class Neural Networks
+**Hyperparameter selection**
+- Learning Rate: 0.001
+
+**Performance metrics**
+- Train Accuracy: 84.57119042657698
+- Validation Accuracy: 84.4288322616496
+- Test Accuracy: 62.810503903477645
