@@ -49,3 +49,11 @@
 - Train Accuracy: 84.57119042657698
 - Validation Accuracy: 84.4288322616496
 - Test Accuracy: 62.810503903477645
+
+## Stratification
+| Model                           | Train Acc | Val Acc | Test Acc | Notes                     |
+|---------------------------------|-----------|---------|----------|----------------------------|
+| Logistic Regression             | 81.73     | 87.20   | 81.16    | Stratification      |
+| Binary Neural Network           |  85.50   |  85.31  |  85.18   | Stratification     |
+| Softmax Regression              | 76.92       | 82.05     | 77.06      | Stratification  |
+| Multiclass Neural Network       | 82.13       | 82.17     |  82.10     | L2 reg (weight decay) + Stratification       |
