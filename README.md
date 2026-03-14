@@ -69,6 +69,14 @@ INTRUSION_DETECTION/
 | Multiclass Neural Network       | 84.57       | 84.43     |  62.81     | softmax + ReLu activation + He init       |
 
 Note: The models generalizes well on training and validation data, but fail to generalize well on test data which can be due to class imbalance. Ensure stratification is added.
+
+| Model                           | Train Acc | Val Acc | Test Acc | Notes                     |
+|---------------------------------|-----------|---------|----------|----------------------------|
+| Logistic Regression             | 81.73     | 87.20   | 81.16    | Stratification      |
+| Binary Neural Network           | TBD    | TBD   | TBD    | Stratification     |
+| Softmax Regression              | TBD       | TBD     | TBD      | Stratification  |
+| Multiclass Neural Network       | TBD       | TBD     |  TBD     | Stratification       |
+
 ## Documentation **[🔗](./documents/)**
 
 Inside the [documentation](./documents/) folder you will find:
