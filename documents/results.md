@@ -24,10 +24,21 @@
 - learning Rate: 0.0003
 
 **Performance metrics**
-- Train Accuracy: 91.56471090207286
-- Validation Accuracy: 91.39080733507978
-- Test Accuracy: 71.14975159687722
+- Train Accuracy: 0.9156471090207286
+- Validation Accuracy: 0.9139080733507978
+- Test Accuracy: 0.7114975159687722
 
 ## Multi-class Softmax Regression
+**Hyperparameter selection**
+- learning rate =  0.0001
+- alfa =  0.01
+
+![alt text](/img/grid_search_softmax.png)
+
+**Performance metrics**
+- Training accuracy: 0.836860853947747
+- Validation accuracy: 0.862467254108121
+- Test accuracy: 0.6266855926188787
+- Macro F1: 0.07519912622310268
 
 ## Multi-class Neural Networks
