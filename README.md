@@ -67,6 +67,7 @@ INTRUSION_DETECTION/
 | Binary Neural Network           | 91.98    | 91.85   | 69.57    | logistic + sigmoid activation     |
 | Softmax Regression              | 83.69       | 86.25     | 62.67      | L2 reg (frobenius) + SGD  |
 | Multiclass Neural Network       | 84.57       | 84.43     |  62.81     | softmax + ReLu activation + He init       |
+
 Note: The models generalizes well on training and validation data, but fail to generalize well on test data which can be due to class imbalance. Ensure stratification is added.
 ## Documentation **[🔗](./documents/)**
 
