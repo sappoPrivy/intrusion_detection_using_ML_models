@@ -63,6 +63,7 @@ INTRUSION_DETECTION/
 ```
 
 ## Model Performance Summary
+**Performance evaluation of Model**
 | Model                           | Train Acc | Val Acc | Test Acc | Notes                     |
 |---------------------------------|-----------|---------|----------|----------------------------|
 | Logistic Regression             | 89.22     | 89.47   | 71.56    | L2 reg (euclidean) + SGD      |
@@ -72,6 +73,7 @@ INTRUSION_DETECTION/
 
 Note: The models generalizes well on training and validation data, but fail to generalize well on test data which can be due to due to different class proportions. Ensure stratification is added.
 
+**Performance evaluation of Model with Stratification**
 | Model                           | Train Acc | Val Acc | Test Acc | Notes                     |
 |---------------------------------|-----------|---------|----------|----------------------------|
 | Logistic Regression             | 81.73     | 87.20   | 81.16    | Stratification      |
